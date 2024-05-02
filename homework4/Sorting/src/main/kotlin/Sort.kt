@@ -2,6 +2,14 @@ package org.example
 
 
 class InsertionSort(){
+/*
+Sorts in place. compares the first two items and swaps the smaller item to be first.
+this process iterates until the entire array is sorted
+    Args: Array (integer type)
+
+    Returns: sorts the array
+*/
+
         fun insertionSort(arr: IntArray) {
             val n = arr.size
             for (i in 1 until n) {
@@ -20,6 +28,14 @@ class InsertionSort(){
 }
 
 class SelectionSort(){
+    /*
+    Sorting algorithm that loops through each item in the given array and stores the minimum value
+the minimum value is then swapped to be in the first available slot
+
+        Args: array (integer type)
+
+        Returns: sorts the array
+    */
     fun selectionSort(arr: IntArray) {
         val n = arr.size
         for (i in 0 until n - 1) {
@@ -37,6 +53,12 @@ class SelectionSort(){
     }
 }
 public class MaxHeapSort {
+    /*
+stores the given array in a binary heap. this enables easier manipulation and prioritization.
+        Args: array (integer type)
+
+        Returns: sorted list (integer type)
+    */
     fun heapSort(array: IntArray): MutableList<Int> {
 
         val size = array.size
@@ -95,6 +117,13 @@ public class MaxHeapSort {
 
 
 class TwoWayMergeSort {
+    /*
+Merge sort algorithm. Implements a divide conquer type of algorthim.
+splits the array in half until there are only two elements. it sorts them and repeats until the entire lsit is sorted
+        Args: list (integer)
+
+        Returns: list (integer)
+    */
     fun mergeSort(unsorted: List<Int>): List<Int> {
 //        split
         if (unsorted.size <= 1) {
